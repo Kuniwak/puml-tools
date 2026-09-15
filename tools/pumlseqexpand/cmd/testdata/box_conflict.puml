@@ -1,0 +1,4 @@
+@startuml BoxConflict
+actor "A" as a
+ref over a, b, c : ./box_sub.puml
+@enduml

@@ -1,0 +1,4 @@
+@startuml
+a -> b
+c -> b
+@enduml

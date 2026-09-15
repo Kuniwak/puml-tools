@@ -1,0 +1,5 @@
+@startuml GlobalSub
+skinparam monochrome true
+title Sub
+A -> B: inner
+@enduml

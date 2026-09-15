@@ -1,0 +1,7 @@
+@startuml Seq
+participant A
+participant B
+A -> B: req
+ref over A, B : ./sub.puml
+B -> A: done
+@enduml

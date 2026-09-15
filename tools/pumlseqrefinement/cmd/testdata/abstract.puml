@@ -1,0 +1,6 @@
+@startuml
+participant A
+participant BE
+A -> BE: req
+BE -> A: ack
+@enduml

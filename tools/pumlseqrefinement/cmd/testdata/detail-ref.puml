@@ -1,0 +1,8 @@
+@startuml
+participant A
+participant B
+participant C
+A -> B: req
+ref over B, C : ./sub.puml
+C -> A: ack
+@enduml

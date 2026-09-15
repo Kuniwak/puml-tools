@@ -1,0 +1,5 @@
+@startuml
+A -> B: login
+B -> X: extra
+B -> A: done
+@enduml

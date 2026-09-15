@@ -1,0 +1,10 @@
+@startuml sub
+participant A
+participant B
+participant C
+par
+    A -> C: notify C
+else
+    A -> B: notify B
+end
+@enduml

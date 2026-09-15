@@ -1,0 +1,4 @@
+@startuml
+A -> B: x
+B -> Z: leak
+@enduml

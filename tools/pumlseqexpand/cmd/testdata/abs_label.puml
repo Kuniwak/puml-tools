@@ -1,0 +1,5 @@
+@startuml
+participant A
+participant B
+ref over A, B : /abs/sub.puml
+@enduml

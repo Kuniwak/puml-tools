@@ -1,0 +1,8 @@
+@startuml
+A -> B: login
+alt ok
+  B -> A: ok
+else ng
+  B -> A: ng
+end
+@enduml

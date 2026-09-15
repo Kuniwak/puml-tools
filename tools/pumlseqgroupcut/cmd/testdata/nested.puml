@@ -1,0 +1,11 @@
+@startuml
+participant A
+participant B
+participant C
+group Outer
+  A -> B
+  group Inner
+    B -> C
+  end
+end
+@enduml

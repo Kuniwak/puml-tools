@@ -1,0 +1,7 @@
+@startuml Box
+box "Ops"
+actor "A" as a
+end box
+participant "B" as b
+ref over a, b, c : ./box_sub.puml
+@enduml

@@ -1,0 +1,10 @@
+@startuml BoxSub
+skinparam SequenceBoxBorderColor #888888
+box "Ops"
+actor "A" as a
+participant "C" as c
+end box
+participant "B" as b
+a -> c: hello
+c -> b: hi
+@enduml

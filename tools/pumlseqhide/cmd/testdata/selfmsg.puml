@@ -1,0 +1,8 @@
+@startuml
+participant A
+participant B
+A -> B: req
+A -> A: internal
+B -> B: log
+B -> A: resp
+@enduml

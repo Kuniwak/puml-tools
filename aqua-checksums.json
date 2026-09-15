@@ -1,0 +1,29 @@
+{
+  "checksums": [
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v2.12.0/goreleaser_Darwin_all.tar.gz",
+      "checksum": "0FD9A6134389A377DA88C343FB36E3D7F00B45D9D7B8B95BF25B33A3C7E8ECD6",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rhysd/actionlint/v1.7.7/actionlint_1.7.7_darwin_arm64.tar.gz",
+      "checksum": "2693315B9093AEACB4EBD91A993FEA54FC215057BF0DA2659056B4BC033873DB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_darwin_arm64.tar.gz",
+      "checksum": "F5D463AEE96EA2485903218A12143478A517C084F94A3F5CA47F1D90440B4ADB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/nodejs.org/dist/v24.7.0/node-v24.7.0-darwin-arm64.tar.gz",
+      "checksum": "FF8298FAAF82C85444AAD7F1E12A4882496286EA9008702029B359D7FAC7F8B3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.407.3/registry.yaml",
+      "checksum": "4BB4CAE5562CA75332F3D3E3058BF3877C32C0F0BAB4CD172C2B2AA6CE628B93601816C36ADF56F05C4DFF4711B9053AA031B7E15B77D1B98A4440126758D997",
+      "algorithm": "sha512"
+    }
+  ]
+}

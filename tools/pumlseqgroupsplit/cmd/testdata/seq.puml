@@ -1,0 +1,12 @@
+@startuml
+participant A
+participant B
+participant C
+group Login
+  A -> B: login
+  B -> A: ok
+end
+group Order / Confirm
+  B -> C: order
+end
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+!include <C4/C4_Context>
+System(a, "a")
+System(b, "b")
+System(c, "c")
+System(z, "z")
+Rel(a, b, "x")
+Rel(b, c, "y")
+Rel(a, z, "z")
+@enduml

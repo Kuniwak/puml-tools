@@ -1,0 +1,3 @@
+@startuml
+ref over A, B : ./nested_mid.puml
+@enduml

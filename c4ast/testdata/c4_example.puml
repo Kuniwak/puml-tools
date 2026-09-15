@@ -1,0 +1,38 @@
+@startuml DUMMY-SHOP-C4
+' This is a dummy sample (not real data).
+!include <C4/C4_Context>
+
+title C4 Level 1: Dummy Online Shop
+caption Sample diagram for testing
+
+Person(customer, "Customer", "A user who purchases items")
+Person(staff, "Shop Staff", "Manages inventory and orders")
+Person_Ext(courier, "Courier", "Delivery provider")
+
+System_Ext(payment_gw, "Payment Gateway", "External payment service")
+System_Ext(email, "Email Service", "Sends notification emails")
+
+Enterprise_Boundary(shop, "Dummy Shop") {
+  System(web, "Web Storefront", "Browse items and place orders")
+
+  System_Boundary(backend, "Backend Systems") {
+    System(order_svc, "Order Service", "Processes orders")
+    System(inventory, "Inventory DB", "Manages inventory")
+  }
+}
+
+Rel(customer, web, "Browses and orders")
+Rel(web, order_svc, "Creates order")
+Rel(order_svc, inventory, "Reserves inventory")
+Rel(order_svc, payment_gw, "Requests payment")
+Rel(order_svc, email, "Sends confirmation email")
+Rel(staff, inventory, "Restocks inventory")
+Rel(courier, customer, "Delivers item")
+
+note as N1
+  This is a dummy sample diagram. It has no relation to any real design or organization.
+end note
+
+SHOW_LEGEND()
+
+@enduml

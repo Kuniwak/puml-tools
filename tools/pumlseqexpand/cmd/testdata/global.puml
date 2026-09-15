@@ -1,0 +1,6 @@
+@startuml Global
+participant A
+participant B
+A -> B: req
+ref over A, B : ./global_sub.puml
+@enduml

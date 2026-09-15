@@ -1,0 +1,3 @@
+@startuml
+ref over A, B : /abs/leaf.puml
+@enduml

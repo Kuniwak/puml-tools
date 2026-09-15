@@ -1,0 +1,10 @@
+@startuml super
+participant A
+participant B
+participant C
+alt cond
+    A -> B: notify B
+else
+    A -> C: notify C
+end
+@enduml

@@ -1,0 +1,36 @@
+@startuml dummy-shop-seq-01-checkout
+' This is a dummy sample (not real data).
+autonumber
+
+actor "Customer" as customer
+participant "Web Storefront" as web
+participant "Order Service" as order
+participant "Inventory DB" as inventory
+participant "Payment Gateway" as payment
+participant "Email Service" as email
+
+customer -> web : <:shopping_cart:> Add item to cart
+web -> customer : Show cart contents
+
+group Checkout
+  customer -> web : Confirm order
+  web -> order : Create order
+  order -> inventory : Reserve inventory
+  alt in stock
+    inventory -> order : Reservation succeeded
+    order -> payment : Request payment
+    payment -> order : Payment completed
+    order -> order : Update order status
+    order -> email : Send confirmation email
+    email -> customer : Send order confirmation email
+  else out of stock
+    inventory -> order : Reservation failed
+    order -> web : Notify out of stock
+    web -> customer : Show out of stock
+  end
+end
+
+note over order, inventory
+  This is a dummy sample diagram. It has no relation to any real design or organization.
+end note
+@enduml

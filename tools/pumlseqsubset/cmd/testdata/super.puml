@@ -1,0 +1,6 @@
+@startuml
+A -> B: login
+B -> C: verify
+C -> B: ok
+B -> A: done
+@enduml

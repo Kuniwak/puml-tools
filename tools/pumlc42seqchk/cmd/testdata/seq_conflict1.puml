@@ -1,0 +1,4 @@
+@startuml
+actor a
+a -> b : x
+@enduml

@@ -1,0 +1,3 @@
+id	kind	external	boundary	label
+web	Container	false	shop	Web Storefront
+order_svc	Container	false	shop	Order Service

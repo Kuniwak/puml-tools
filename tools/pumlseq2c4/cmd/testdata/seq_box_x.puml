@@ -1,0 +1,5 @@
+@startuml
+box "X"
+  participant a
+end box
+@enduml

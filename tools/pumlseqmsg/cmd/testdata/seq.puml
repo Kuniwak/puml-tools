@@ -1,0 +1,9 @@
+@startuml
+participant A
+participant B
+participant C
+A -> B: req
+B -> C: fwd
+C -> B: resp
+B -> A: resp
+@enduml

@@ -1,0 +1,6 @@
+@startuml Sub
+participant A
+participant B
+A -> B: inner
+B -> A: ack
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+' This is a dummy sample (not real data).
+actor "User" as user
+participant "Shop" as shop
+participant "Payment" as pay
+
+user -> shop : place order
+shop -> pay : charge payment
+@enduml

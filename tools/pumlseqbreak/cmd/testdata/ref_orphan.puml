@@ -1,0 +1,8 @@
+@startuml
+participant a
+participant b
+participant c
+participant d
+a -> b: login
+ref over c, d : ./sub.puml
+@enduml

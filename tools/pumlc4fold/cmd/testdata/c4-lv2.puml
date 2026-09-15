@@ -1,0 +1,16 @@
+@startuml
+' This is a dummy sample (not real data).
+!include <C4/C4_Container>
+
+Person(user, "User")
+System_Ext(pay, "Payment")
+
+System_Boundary(shop, "Shop") {
+  Container(web, "Web Storefront", "Go")
+  Container(order_svc, "Order Service", "Go")
+}
+
+Rel(user, web, "browse")
+Rel(web, order_svc, "create")
+Rel(order_svc, pay, "charge")
+@enduml

@@ -1,0 +1,4 @@
+@startuml
+participant a
+a -> b : x
+@enduml

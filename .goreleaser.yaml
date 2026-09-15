@@ -1,0 +1,125 @@
+version: 2
+
+builds:
+  - id: pumlparse
+    binary: pumlparse
+    main: ./tools/pumlparse/main.go
+    <<: &build_common
+      env:
+        - CGO_ENABLED=0
+      # -trimpath: keep build machine absolute paths out of the distributed binaries.
+      flags:
+        - -trimpath
+      ldflags:
+        - -s -w -X github.com/Kuniwak/puml-tools/version.Version={{.Version}}
+      # Pin the embedded timestamp to the commit time for reproducible builds.
+      mod_timestamp: "{{ .CommitTimestamp }}"
+      goos:
+        - linux
+        - windows
+        - darwin
+      goarch:
+        - amd64
+        - arm64
+
+  - id: pumlseqgroupcut
+    binary: pumlseqgroupcut
+    main: ./tools/pumlseqgroupcut/main.go
+    <<: *build_common
+
+  - id: pumlseqgroupmask
+    binary: pumlseqgroupmask
+    main: ./tools/pumlseqgroupmask/main.go
+    <<: *build_common
+
+  - id: pumlseqgroupsplit
+    binary: pumlseqgroupsplit
+    main: ./tools/pumlseqgroupsplit/main.go
+    <<: *build_common
+
+  - id: pumlseqtrace
+    binary: pumlseqtrace
+    main: ./tools/pumlseqtrace/main.go
+    <<: *build_common
+
+  - id: pumltodo
+    binary: pumltodo
+    main: ./tools/pumltodo/main.go
+    <<: *build_common
+
+  - id: pumlseqbreak
+    binary: pumlseqbreak
+    main: ./tools/pumlseqbreak/main.go
+    <<: *build_common
+
+  - id: pumlseqfold
+    binary: pumlseqfold
+    main: ./tools/pumlseqfold/main.go
+    <<: *build_common
+
+  - id: pumlseqhide
+    binary: pumlseqhide
+    main: ./tools/pumlseqhide/main.go
+    <<: *build_common
+
+  - id: pumlseqproj
+    binary: pumlseqproj
+    main: ./tools/pumlseqproj/main.go
+    <<: *build_common
+
+  - id: pumlseqmsg
+    binary: pumlseqmsg
+    main: ./tools/pumlseqmsg/main.go
+    <<: *build_common
+
+  - id: pumlseqsubset
+    binary: pumlseqsubset
+    main: ./tools/pumlseqsubset/main.go
+    <<: *build_common
+
+  - id: pumlseqrefinement
+    binary: pumlseqrefinement
+    main: ./tools/pumlseqrefinement/main.go
+    <<: *build_common
+
+  - id: pumlseqexpand
+    binary: pumlseqexpand
+    main: ./tools/pumlseqexpand/main.go
+    <<: *build_common
+
+  - id: pumlseq2c4
+    binary: pumlseq2c4
+    main: ./tools/pumlseq2c4/main.go
+    <<: *build_common
+
+  - id: pumlc42seqchk
+    binary: pumlc42seqchk
+    main: ./tools/pumlc42seqchk/main.go
+    <<: *build_common
+
+  - id: pumlc4fold
+    binary: pumlc4fold
+    main: ./tools/pumlc4fold/main.go
+    <<: *build_common
+
+  - id: pumlc4bdyls
+    binary: pumlc4bdyls
+    main: ./tools/pumlc4bdyls/main.go
+    <<: *build_common
+
+  - id: pumlhelp
+    binary: pumlhelp
+    main: ./tools/pumlhelp/main.go
+    <<: *build_common
+
+archives:
+  - formats: ["tar.gz"]
+    format_overrides:
+      - goos: windows
+        formats: ["zip"]
+
+checksum:
+  name_template: "checksums.txt"
+
+release:
+  prerelease: auto

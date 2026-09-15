@@ -1,0 +1,24 @@
+@startuml
+!include <C4/C4_Context>
+
+Person(customer, "Customer")
+System(web, "Web Storefront")
+System(order, "Order Service")
+System(inventory, "Inventory DB")
+System(payment, "Payment Gateway")
+System(email, "Email Service")
+
+Rel(customer, web, "Add item to cart")
+Rel(web, customer, "Show cart contents")
+Rel(customer, web, "Confirm order")
+Rel(web, order, "Create order")
+Rel(order, inventory, "Reserve inventory")
+Rel(inventory, order, "Reservation succeeded")
+Rel(order, payment, "Request payment")
+Rel(payment, order, "Payment completed")
+Rel(order, email, "Send confirmation email")
+Rel(email, customer, "Send order confirmation email")
+Rel(inventory, order, "Reservation failed")
+Rel(order, web, "Notify out of stock")
+Rel(web, customer, "Show out of stock")
+@enduml

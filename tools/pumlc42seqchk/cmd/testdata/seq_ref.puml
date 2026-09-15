@@ -1,0 +1,6 @@
+@startuml
+participant a
+participant b
+a -> b: real
+ref over a, b : ./sub.puml
+@enduml

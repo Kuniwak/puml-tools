@@ -1,0 +1,8 @@
+@startuml sub
+participant A
+participant B
+participant C
+A -> C: notify C
+A -> Z: notify Z
+A -> B: notify B
+@enduml

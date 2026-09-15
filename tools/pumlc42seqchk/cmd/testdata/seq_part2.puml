@@ -1,0 +1,3 @@
+@startuml
+b -> c : y
+@enduml
